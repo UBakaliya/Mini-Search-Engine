@@ -1,9 +1,9 @@
 package src;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 
-public class GUI_APP {
-    public void GUI() {
+public class GUI_APP extends Implementation {
+    public GUI_APP() {
 
         JFrame frame = new JFrame();
         frame.setSize(450, 450);

@@ -20,5 +20,5 @@ public interface Interface {
     void buildDB(String splitWord, String url);
 
     // search the query in the database (map)
-    void search(String query);
+    Set<String> search(String query);
 }

@@ -2,10 +2,11 @@ package src;
 
 import java.io.File;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Search extends Implementation {
 
-    private Interface DB;
+    private Implementation DB;
 
     public Search() {
         DB = new Implementation();
@@ -22,13 +23,17 @@ public class Search extends Implementation {
             scanner.close();
 
         } catch (Exception e) {
-            System.out.println("CAN'T LOAD THE DATA BASE. TRY AGAIN.");
+            System.out.println("SOMETHING WENT WRONG");
             System.exit(0);
         }
     }
 
-    public void querySearch(String s) {
-        DB.search(s);
+    public void RUN() {
+        Set<String> res = DB.search("vector +bool map set");
+        // GUI_APP app = new GUI_APP();
+
+        for (String i : res) {
+            System.out.println(i);
+        }
     }
-    
 }

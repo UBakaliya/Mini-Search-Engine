@@ -26,7 +26,7 @@ import src.Search;
 public class Main {
 
     public static void main(String[] args) {
-        Search temp = new Search();
-        temp.querySearch(" ");
+        Search SEARCH_ENGINE = new Search();
+        SEARCH_ENGINE.RUN();
     }
 }
