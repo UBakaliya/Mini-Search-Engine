@@ -38,8 +38,9 @@ public class Search extends Implementation {
 
     public void RUN() {
         Set<String> result;
-        System.out.println("Welcome to Search Engine!");
-        System.out.println("Data base contains total: '" + DB.size() + "'. Queries terms.\n");
+        System.out.print("\033[H\033[2J");
+        System.out.println("### Welcome to Search Engine! ###\n");
+        System.out.println("* Database contains total: '" + DB.size() + "' queries terms.\n");
         Scanner queryEntry = new Scanner(System.in);
         System.out.print("Enter a query to search: ");
         String input = queryEntry.nextLine();
@@ -52,6 +53,7 @@ public class Search extends Implementation {
             System.out.print("\nEnter a query to search: ");
             input = queryEntry.nextLine();
         }
+        System.out.println("\nThank you for searching!");
         queryEntry.close();
     }
 }
