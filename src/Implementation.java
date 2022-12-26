@@ -1,3 +1,11 @@
+/**
+ * @file Implementation.java 
+ * @author Uvaish Bakaliya
+ * @since 12-23-2022
+ * @apiNote The creator has granted full access to the user who is utilizing it.
+ * @copyright Copyright © 2022 UB
+ */
+
 package src;
 
 import java.util.*;
@@ -43,21 +51,25 @@ public class Implementation implements Interface {
     @Override
     public Set<String> gatherToken(String bodyText) {
         // split the string by spaces and insert the split string into set
-        Set<String> GToken = new HashSet<String>(Arrays.asList(this.cleanToken(bodyText).split(" ")));
+        Set<String> GToken = new HashSet<String>(Arrays.asList(bodyText.split(" ")));
         return GToken;
     }
 
     @Override
     public void buildDB(String bodyText, String url) {
-        Set<String> text = this.gatherToken(bodyText);
+        Set<String> text = this.gatherToken(bodyText); // split the body text
+        // add the split body text to data base with the appropriate url
         for (final String i : text) {
             if (!i.equals("") && !i.equals(" ")) {
-                this.database.computeIfAbsent(i, V -> new HashSet<>()).add(url);
+                // clean it and then added
+                this.database.computeIfAbsent(this.cleanToken(i), V -> new HashSet<>()).add(url);
             }
         }
     }
 
+    // Use full for finding the query in data base quickly
     private Set<String> findQuery(String query) {
+        // edge case (MUST ME HANDLED):- if a query is not in data base
         if (!this.database.containsKey(query))
             return new HashSet<>();
         return this.database.get(query);
@@ -69,8 +81,7 @@ public class Implementation implements Interface {
         ArrayList<String> splitQuery = new ArrayList<>(Arrays.asList(query.split(" ")));
         // if the search term is only one then:
         if (splitQuery.size() <= 1) {
-            this.cleanToken(query);
-            this.res = this.findQuery(query);
+            this.res = this.findQuery(this.cleanToken(query));
             return this.res;
         }
         // if the search term more then one term then:
