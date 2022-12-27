@@ -10,7 +10,6 @@ package src;
 
 import java.io.File;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Search extends Implementation {
 
@@ -37,23 +36,28 @@ public class Search extends Implementation {
     }
 
     public void RUN() {
-        Set<String> result;
-        System.out.print("\033[H\033[2J");
-        System.out.println("### Welcome to Search Engine! ###\n");
-        System.out.println("* Database contains total: '" + DB.size() + "' queries terms.\n");
-        Scanner queryEntry = new Scanner(System.in);
-        System.out.print("Enter a query to search: ");
-        String input = queryEntry.nextLine();
-        while (input != "") { // exit on enter
-            result = DB.search(input);
-            System.out.println("Total URLs: " + result.size() + "\n");
-            for (final String i : result) {
-                System.out.println(i);
-            }
-            System.out.print("\nEnter a query to search: ");
-            input = queryEntry.nextLine();
-        }
-        System.out.println("\nThank you for searching!");
-        queryEntry.close();
+        GUI_APP app = new GUI_APP(DB);
+        app.RUN_GUI(DB);
+
+        // Set<String> result;
+        // System.out.print("\033[H\033[2J");
+        // System.out.println("### Welcome to Search Engine! ###\n");
+        // System.out.println("* Database contains total: '" + DB.size() + "' queries
+        // terms.\n");
+        // Scanner queryEntry = new Scanner(System.in);
+        // System.out.print("Enter a query to search: ");
+        // String input = queryEntry.nextLine();
+        // while (input != "") { // exit on enter
+        // result = DB.search(input);
+        // System.out.println("Total URLs: " + result.size() + "\n");
+        // for (final String i : result) {
+        // System.out.println(i);
+        // }
+        // System.out.print("\nEnter a query to search: ");
+        // input = queryEntry.nextLine();
+        // }
+        // System.out.println("\nThank you for searching!");
+        // queryEntry.close();
     }
+
 }

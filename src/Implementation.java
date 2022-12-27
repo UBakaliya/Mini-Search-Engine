@@ -82,6 +82,7 @@ public class Implementation implements Interface {
 
     @Override
     public Set<String> search(String query) {
+        this.res.clear();
         // split the string by spaces
         ArrayList<String> splitQuery = new ArrayList<>(Arrays.asList(query.split(" ")));
         // if the search term is only one then:
@@ -91,13 +92,12 @@ public class Implementation implements Interface {
         }
         // if the search term more then one term then:
         for (final String i : splitQuery) {
-            if (i.charAt(0) == '+')
-                this.res.removeAll(this.findQuery(this.cleanToken(i)));
-            else if (i.charAt(0) == '-')
+            if ((char) i.charAt(0) == '+')
                 this.res.retainAll(this.findQuery(this.cleanToken(i)));
+            else if ((char) i.charAt(0) == '-')
+                this.res.removeAll(this.findQuery(this.cleanToken(i)));
             else
                 this.res.addAll(this.findQuery(this.cleanToken(i)));
-
         }
         return this.res;
     }
