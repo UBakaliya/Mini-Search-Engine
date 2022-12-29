@@ -30,7 +30,7 @@ public class Search extends Implementation {
             scanner.close();
             this.RUN();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, ".txt", "ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Invalid 'txt'", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }
 

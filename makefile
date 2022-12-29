@@ -3,7 +3,7 @@ MAIN_CLASS = Main
 
 # Compile the project
 
-build: clean
+build:
 	@javac -d bin $(MAIN_CLASS).java
 
 # Run the project
@@ -15,4 +15,4 @@ clean:
 	rm -rf bin
 
 # Compile and run the project
-all: build run 
+all: build run clean
