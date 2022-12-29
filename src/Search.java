@@ -10,16 +10,16 @@ package src;
 
 import java.io.File;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Search extends Implementation {
 
     private Implementation DB;
 
-    public Search() {
+    public Search(String fileName) {
         DB = new Implementation();
-
         try {
-            File outFile = new File("src/database_Files/database.txt");
+            File outFile = new File(fileName);
             Scanner scanner = new Scanner(outFile);
 
             while (scanner.hasNextLine()) {
@@ -28,17 +28,17 @@ public class Search extends Implementation {
                 DB.buildDB(bodyText, url);
             }
             scanner.close();
-
+            this.RUN();
         } catch (Exception e) {
-            System.out.println("SOMETHING WENT WRONG");
-            System.exit(0);
+            JOptionPane.showMessageDialog(null, ".txt", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }
 
     public void RUN() {
-        GUI_APP app = new GUI_APP(DB);
-        app.RUN_GUI(DB);
-
+        new GUI_APP(DB).RUN_GUI(DB);
+        // -------------------------------------------------------------
+        // @NOTE: BELOW CODE ONLY RUNS IN TERMINAL. USE FULL FOR DUBBING.
+        // -------------------------------------------------------------
         // Set<String> result;
         // System.out.print("\033[H\033[2J");
         // System.out.println("### Welcome to Search Engine! ###\n");

@@ -16,6 +16,6 @@ import src.Search;
 public class Main {
 
     public static void main(String[] args) {
-        new Search().RUN();
+        new Search("src/database_Files/database.txt");
     }
 }

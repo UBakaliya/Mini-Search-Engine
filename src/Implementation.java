@@ -18,11 +18,12 @@ import java.util.ArrayList;
 public class Implementation implements Interface {
     // store the file data (bodyText.splitWord --> urls.set)
     private Map<String, Set<String>> database;
-    private Set<String> res;
+    private Set<String> queryResult;
 
     public Implementation() {
-        this.res = new HashSet<>();
+        this.queryResult = new HashSet<>();
         this.database = new HashMap<>();
+        database.clear();
     }
 
     public int size() {
@@ -35,11 +36,9 @@ public class Implementation implements Interface {
         if (str == null || str.isEmpty()) {
             return str;
         }
-
         // Initialize variables to store the start and end indices of the string
         int start = 0;
         int end = str.length() - 1;
-
         // Iterate through the string from the front and back, until we find a
         // non-punctuation character
         while (start <= end && !Character.isLetterOrDigit(str.charAt(start))) {
@@ -48,7 +47,6 @@ public class Implementation implements Interface {
         while (end >= start && !Character.isLetterOrDigit(str.charAt(end))) {
             end--;
         }
-
         // Return the substring from the start index to the end index
         return str.substring(start, end + 1).toLowerCase();
     }
@@ -65,11 +63,13 @@ public class Implementation implements Interface {
         Set<String> text = this.gatherToken(bodyText); // split the body text
         // add the split body text to data base with the appropriate url
         for (final String i : text) {
-            if (!i.equals("") && !i.equals(" ")) {
-                // clean it and then added
-                this.database.computeIfAbsent(this.cleanToken(i), V -> new HashSet<>()).add(url);
+            String word = this.cleanToken(i);
+            if (word.equals("") || word.equals(" ")) {
+                continue;
             }
+            this.database.computeIfAbsent(word, V -> new HashSet<>()).add(url);
         }
+        text.clear();
     }
 
     // Use full for finding the query in data base quickly
@@ -82,24 +82,20 @@ public class Implementation implements Interface {
 
     @Override
     public Set<String> search(String query) {
-        this.res.clear();
+        queryResult.clear();
         // split the string by spaces
         ArrayList<String> splitQuery = new ArrayList<>(Arrays.asList(query.split(" ")));
-        // if the search term is only one then:
-        if (splitQuery.size() <= 1) {
-            this.res = this.findQuery(this.cleanToken(query));
-            return this.res;
-        }
+
         // if the search term more then one term then:
         for (final String i : splitQuery) {
-            if ((char) i.charAt(0) == '+')
-                this.res.retainAll(this.findQuery(this.cleanToken(i)));
-            else if ((char) i.charAt(0) == '-')
-                this.res.removeAll(this.findQuery(this.cleanToken(i)));
+            if (i.charAt(0) == '+')
+                this.queryResult.retainAll(this.findQuery(this.cleanToken(i)));
+            else if (i.charAt(0) == '-')
+                this.queryResult.removeAll(this.findQuery(this.cleanToken(i)));
             else
-                this.res.addAll(this.findQuery(this.cleanToken(i)));
+                this.queryResult.addAll(this.findQuery(this.cleanToken(i)));
         }
-        return this.res;
+        return this.queryResult;
     }
 
 }

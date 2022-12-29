@@ -2,7 +2,8 @@
 MAIN_CLASS = Main
 
 # Compile the project
-build:
+
+build: clean
 	@javac -d bin $(MAIN_CLASS).java
 
 # Run the project
