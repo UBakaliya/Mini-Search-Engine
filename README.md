@@ -8,7 +8,7 @@
 
 - It is not clear from the given information what specific features or capabilities the Search Engine will have. However, some common features of search engines include:
 
-  - Keyword search: the ability to search for specific words or phrases within a set of documents or web pages.
+  - Keyword search: the ability to search for specific words or phrases within a set of documents or web Windows.
   - Boolean search: the ability to use logical operators such as "AND," "OR," and "NOT" to combine or exclude search terms.
   - Wildcard search: the ability to use special characters such as "\*" or "?" to match multiple characters or represent missing characters in a search term.
   - Fuzzy search: the ability to find results that are similar to, but not exactly the same as, the search term.
@@ -21,9 +21,9 @@
   - Buttons or other controls to submit a search, clear the search field, or access advanced search options.
   - A list or grid of search results, including titles, descriptions, and potentially other metadata such as dates, authors, or categories.
   - Controls for sorting, filtering, or grouping the search results.
-  - Links or buttons to view or interact with the search results, such as opening a web page or saving an item to a bookmark list.
+  - Links or buttons to view or interact with the search results, such as opening a web Window or saving an item to a bookmark list.
   - A navigation menu or other options for accessing additional features or settings of the Search Engine.
-- Depending on the specific requirements of the Search Engine project, it may involve retrieving data from a variety of sources such as web pages, databases, or local files. It may also involve parsing and indexing the data to make it more easily searchable, and storing the results in a way that allows for fast and efficient retrieval.
+- Depending on the specific requirements of the Search Engine project, it may involve retrieving data from a variety of sources such as web Windows, databases, or local files. It may also involve parsing and indexing the data to make it more easily searchable, and storing the results in a way that allows for fast and efficient retrieval.
 
 ---
 
@@ -41,13 +41,13 @@ Call `make all` on your console to start the program. Enjoy 😉.
 
 ---
 
-## Start Page:
+## Start Window:
 
 ![Drag Racing](src/images/output1.png)
 
 ---
 
-## Institutions page:
+## Institutions Window:
 
 ![Drag Racing](src/images/output2.png)
 
