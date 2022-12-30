@@ -1,37 +1,41 @@
 <!-- @format -->
 
-# Search-Engine-Java
+# Search Engine
+This Search Engine is an extension of the C++ "Min-Search-Engine" program's concept, written in Java and featuring a GUI interface. In addition to displaying the URLs of search results, this application also displays the body text of the URLs and allows users to change the color scheme of the interface.
 
----
+## Features
+- Search the web using keywords or phrases
+- View the body text of URLs in search results
+- Customize the color scheme of the interface
+- Java GUI interface
 
-## This Search Engine project is an extension of the C++ "Min-Search-Engine" program's concept. However, this application will be a Java GUI program.
 
-- It is not clear from the given information what specific features or capabilities the Search Engine will have. However, some common features of search engines include:
+## Requirements
+- Java 8 or higher
+- An internet connection
 
-  - Keyword search: the ability to search for specific words or phrases within a set of documents or web Windows.
-  - Boolean search: the ability to use logical operators such as "AND," "OR," and "NOT" to combine or exclude search terms.
-  - Wildcard search: the ability to use special characters such as "\*" or "?" to match multiple characters or represent missing characters in a search term.
-  - Fuzzy search: the ability to find results that are similar to, but not exactly the same as, the search term.
-  - Phrase search: the ability to find results that contain an exact phrase, rather than just individual words.
-  - Stemming: the ability to find results that contain different forms of a word, such as singular and plural forms.
-  - Synonym search: the ability to find results that contain synonyms of the search term.
-
-- The Java GUI of the Search Engine may include additional features such as:
-  - A search bar or text field for users to enter their search queries.
-  - Buttons or other controls to submit a search, clear the search field, or access advanced search options.
-  - A list or grid of search results, including titles, descriptions, and potentially other metadata such as dates, authors, or categories.
-  - Controls for sorting, filtering, or grouping the search results.
-  - Links or buttons to view or interact with the search results, such as opening a web Window or saving an item to a bookmark list.
-  - A navigation menu or other options for accessing additional features or settings of the Search Engine.
-- Depending on the specific requirements of the Search Engine project, it may involve retrieving data from a variety of sources such as web Windows, databases, or local files. It may also involve parsing and indexing the data to make it more easily searchable, and storing the results in a way that allows for fast and efficient retrieval.
-
----
-
-Launch your Terminal and clone the repository. Clone it by using following command:
-
+# Installation
+- To run the Search Engine, you will need to have Java 8 or higher installed on your machine. Once you have Java installed, you can download the Search - - Engine program files from this repository and run the application using the following command:
 ```
 git clone https://github.com/UBakaliya/Search-Engine-Java.git
 ```
+---
+## Usage
+To use the Search Engine, simply enter your search query in the input field and click the "Search" button. The application will retrieve and display the search results, including the body text of the URLs, in the results panel. You can customize the color scheme of the interface by clicking on the "Settings" button and selecting your preferred color scheme.
+
+## Usage
+To use the Search Engine, simply enter your search query in the input field and click the "Search" button. The application will retrieve and display the search results, including the body text of the URLs, in the results panel. You can customize the color scheme of the interface by clicking on the "Settings" button and selecting your preferred color scheme.
+
+
+Contributions
+We welcome contributions to the Search Engine project. If you have an idea for a new feature or have found a bug that you would like to fix, please feel free to open a pull request or issue on the repository.
+
+
+
+
+License
+This project is licensed under the Uvaish Bakaliya license. See the LICENSE file for more information.
+
 
 After downloading the application, identify the place where it was downloaded to get started.
 
