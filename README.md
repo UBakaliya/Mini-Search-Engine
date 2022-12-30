@@ -23,17 +23,14 @@ git clone https://github.com/UBakaliya/Search-Engine-Java.git
 ## Usage
 To use the Search Engine, simply enter your search query in the input field and click the "Search" button. The application will retrieve and display the search results, including the body text of the URLs, in the results panel. You can customize the color scheme of the interface by clicking on the "Settings" button and selecting your preferred color scheme.
 
-## Usage
-To use the Search Engine, simply enter your search query in the input field and click the "Search" button. The application will retrieve and display the search results, including the body text of the URLs, in the results panel. You can customize the color scheme of the interface by clicking on the "Settings" button and selecting your preferred color scheme.
 
-
-Contributions
+## Contributions
 We welcome contributions to the Search Engine project. If you have an idea for a new feature or have found a bug that you would like to fix, please feel free to open a pull request or issue on the repository.
 
 
 
 
-License
+## License
 This project is licensed under the Uvaish Bakaliya license. See the LICENSE file for more information.
 
 
