@@ -16,7 +16,6 @@ import java.util.Set;
 import java.io.*;
 import java.io.IOException;
 
-
 public class GUI_APP extends JFrame implements ActionListener, KeyListener {
 
     // Declare and initialize a JTextField for user input
