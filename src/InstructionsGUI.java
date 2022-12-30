@@ -21,16 +21,18 @@ public class InstructionsGUI extends JFrame implements ActionListener {
 
         // create the instructions text area
         instructionsArea = new JTextArea();
+        instructionsArea.setLineWrap(true);
+        instructionsArea.setWrapStyleWord(true);
         instructionsArea.setForeground(forGroundColor);
         instructionsArea.setBackground(BGcolor);
         instructionsArea.setFont(new Font("Courier New", Font.BOLD, 20));
         instructionsArea.setText("* Welcome to the Search Engine! * \n\n" +
-                "This program allows you to search the web for information on a particular topic. \nTo use the program, follow these steps:\n\n"
+                "This program allows you to search the web for information on a particular topic. To use the program, follow these steps:\n\n"
                 +
-                "1. Enter your search query in the input field. You can include plus signs (+) to \nindicate that a certain term is required in the search results, \nminus signs (-) to indicate that a certain term should be excluded from the search results, \nand spaces to separate multiple terms.\n\n\n"
+                "1. Enter your search query in the input field. You can include plus signs (+) to indicate that a certain term is required in the search results, minus signs (-) to indicate that a certain term should be excluded from the search results, and spaces to separate multiple terms.\n\n\n"
                 +
                 "2. Click the \"Search\" button to initiate the search.\n\n\n" +
-                "3. The search results will be displayed in the form of URLs. These URLs represent web pages \nthat are relevant to your search query.\n\n\n"
+                "3. The search results will be displayed in the form of URLs. These URLs represent web pages that are relevant to your search query.\n\n\n"
                 +
                 "4. Click on a URL to open the corresponding web page in your web browser.\n\n\n" +
                 "5. You can use the scroll bar to view all of the search results.\n\n\n" +

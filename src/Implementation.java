@@ -18,12 +18,16 @@ import java.util.ArrayList;
 public class Implementation implements Interface {
     // store the file data (bodyText.splitWord --> urls.set)
     private Map<String, Set<String>> database;
+    private Map<String, Set<String>> bodyTextDB;
     private Set<String> queryResult;
 
     public Implementation() {
         this.queryResult = new HashSet<>();
         this.database = new HashMap<>();
-        database.clear();
+        this.bodyTextDB = new HashMap<>();
+        this.database.clear();
+        this.bodyTextDB.clear();
+
     }
 
     public int size() {
@@ -67,9 +71,24 @@ public class Implementation implements Interface {
             if (word.equals("") || word.equals(" ")) {
                 continue;
             }
-            this.database.computeIfAbsent(word, V -> new HashSet<>()).add(url);
+            this.database.computeIfAbsent(word, VALUE -> new HashSet<>()).add(url);
         }
         text.clear();
+    }
+
+    @Override
+    public void buildBodyTextDB(String url, String bodyText) {
+        // TO DO
+        this.bodyTextDB.computeIfAbsent(url, VALUE -> new HashSet<>()).add(bodyText);
+    }
+
+    @Override
+    public String getBodyText(String key) {
+        String bodyText = "";
+        for (final String i : this.bodyTextDB.get(key)) {
+            bodyText += i;
+        }
+        return bodyText;
     }
 
     // Use full for finding the query in data base quickly

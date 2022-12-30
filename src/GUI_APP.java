@@ -14,6 +14,8 @@ import java.awt.Color;
 import javax.swing.*;
 import java.util.Set;
 import java.io.*;
+import java.io.IOException;
+
 
 public class GUI_APP extends JFrame implements ActionListener, KeyListener {
 
@@ -87,9 +89,9 @@ public class GUI_APP extends JFrame implements ActionListener, KeyListener {
         inputPanel.add(inputField);
         inputPanel.add(searchButton);
 
-        // add the instructions text area to the center of the GUI
-
         outputTextArea.setEditable(false);
+        outputTextArea.setLineWrap(true);
+        outputTextArea.setWrapStyleWord(true);
         // Add the input panel and output text area to the window
         add(inputPanel, BorderLayout.NORTH);
         add(outputTextArea, BorderLayout.CENTER);
@@ -106,11 +108,7 @@ public class GUI_APP extends JFrame implements ActionListener, KeyListener {
     private void writeInFile(String filePath) {
         try {
             FileWriter myWriter = new FileWriter(filePath);
-            myWriter.write("About " + result.size() + " result" + "\n");
-            for (final String i : result) {
-                myWriter.write(i + "\n");
-            }
-            result.clear();
+            myWriter.write(outputTextArea.getText());
             myWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -120,10 +118,11 @@ public class GUI_APP extends JFrame implements ActionListener, KeyListener {
     private void displayQueryResult() {
         outputTextArea.setText("");
         result = this.database.search(inputField.getText());
-        outputTextArea.append("About " + result.size() + " result" + "\n");
+        outputTextArea.append("About " + result.size() + " result" + "\n\n");
         for (final String i : result) {
-            outputTextArea.append(i + "\n");
+            outputTextArea.append(i + "\n" + database.getBodyText(i) + "\n\n");
         }
+
     }
 
     @Override

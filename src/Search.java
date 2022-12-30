@@ -26,6 +26,7 @@ public class Search extends Implementation {
                 String url = scanner.nextLine();
                 String bodyText = scanner.nextLine();
                 DB.buildDB(bodyText, url);
+                DB.buildBodyTextDB(url, bodyText);
             }
             scanner.close();
             this.RUN();
