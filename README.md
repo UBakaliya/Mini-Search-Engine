@@ -33,7 +33,8 @@ We welcome contributions to the Search Engine project. If you have an idea for a
 ## License
 This project is licensed under the Uvaish Bakaliya license. See the LICENSE file for more information.
 
-
+---
+## Program is action:
 After downloading the application, identify the place where it was downloaded to get started.
 
 Call `make all` on your console to start the program. Enjoy 😉.
