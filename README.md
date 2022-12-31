@@ -37,7 +37,7 @@ This project is licensed under the Uvaish Bakaliya license. See the LICENSE file
 ## Program is action:
 After downloading the application, identify the place where it was downloaded to get started.
 
-Double click on `Search-Engine.jar` start the program. Enjoy 😉.
+Double click on `Search Engine.jar` start the program. Enjoy 😉.
 
 - Here is a screenshot of the application in action:
 
