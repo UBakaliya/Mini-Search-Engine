@@ -28,8 +28,6 @@ To use the Search Engine, simply enter your search query in the input field and 
 We welcome contributions to the Search Engine project. If you have an idea for a new feature or have found a bug that you would like to fix, please feel free to open a pull request or issue on the repository.
 
 
-
-
 ## License
 This project is licensed under the Uvaish Bakaliya license. See the LICENSE file for more information.
 
@@ -49,7 +47,7 @@ Double click on `Search Engine.jar` start the program. Enjoy 😉.
 
 ---
 
-## Institutions Window:
+## instructions Window:
 
 ![Drag Racing](src/images/output2.png)
 
