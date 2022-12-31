@@ -17,7 +17,7 @@ This Search Engine is an extension of the C++ "Min-Search-Engine" program's conc
 # Installation
 - To run the Search Engine, you will need to have Java 8 or higher installed on your machine. Once you have Java installed, you can download the Search - - Engine program files from this repository and run the application using the following command:
 ```
-git clone https://github.com/UBakaliya/Search-Engine-Java.git
+git clone https://github.com/UBakaliya/Search-Engine.git
 ```
 ---
 ## Usage
