@@ -133,7 +133,8 @@ public class GUI_APP extends JFrame implements ActionListener, KeyListener {
             JFileChooser fileChooser = new JFileChooser();
             int response = fileChooser.showOpenDialog(null);
             if (response == fileChooser.APPROVE_OPTION) {
-                dispose();
+                // dispose(); // NOTE: CHANGE THIS ONLY WHEN YOU DON'T WANT TO KEEP THE PREVIOUS
+                // WINDOW
                 String filePath = fileChooser.getSelectedFile().getAbsolutePath();
                 new Search(filePath);
             }
@@ -194,7 +195,8 @@ public class GUI_APP extends JFrame implements ActionListener, KeyListener {
         gui.setSize(550, 550);
         gui.setTitle("Search Engine");
         gui.setLocationRelativeTo(null);
-        gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gui.setVisible(true);
     }
 }

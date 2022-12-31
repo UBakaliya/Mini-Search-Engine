@@ -19,6 +19,7 @@ public interface Interface {
     // assigned the body text words to a urls (set)
     void buildDB(String splitWord, String url);
 
+    // bodying the map with url as a keys and body texts as a value, "unclean" words
     void buildBodyTextDB(String bodyText, String url);
 
     // search the query in the database (map)
