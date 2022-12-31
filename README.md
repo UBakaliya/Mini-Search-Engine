@@ -47,7 +47,7 @@ Double click on `Search Engine.jar` start the program. Enjoy 😉.
 
 ---
 
-## instructions Window:
+## Instructions Window:
 
 ![Drag Racing](src/images/output2.png)
 
