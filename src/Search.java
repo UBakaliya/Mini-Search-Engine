@@ -18,19 +18,24 @@ public class Search extends Implementation {
 
     public Search(String fileName) {
         DB = new Implementation();
-        try {
-            File outFile = new File(fileName);
-            Scanner scanner = new Scanner(outFile);
+        File outFile = new File(fileName);
+        String txt = fileName.substring(fileName.length() - 3, fileName.length());
+        if (txt.equals("txt")) {
+            try {
+                Scanner scanner = new Scanner(outFile);
 
-            while (scanner.hasNextLine()) {
-                String url = scanner.nextLine();
-                String bodyText = scanner.nextLine();
-                DB.buildDB(bodyText, url);
-                DB.buildBodyTextDB(url, bodyText);
+                while (scanner.hasNextLine()) {
+                    String url = scanner.nextLine();
+                    String bodyText = scanner.nextLine();
+                    DB.buildDB(bodyText, url);
+                    DB.buildBodyTextDB(url, bodyText);
+                }
+                scanner.close();
+                this.RUN();
+            } catch (Exception e) {
+                this.RUN();
             }
-            scanner.close();
-            this.RUN();
-        } catch (Exception e) {
+        } else {
             JOptionPane.showMessageDialog(null, "Invalid 'txt'", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }

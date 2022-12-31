@@ -134,7 +134,8 @@ public class GUI_APP extends JFrame implements ActionListener, KeyListener {
             int response = fileChooser.showOpenDialog(null);
             if (response == fileChooser.APPROVE_OPTION) {
                 dispose();
-                new Search(fileChooser.getSelectedFile().getAbsolutePath());
+                String filePath = fileChooser.getSelectedFile().getAbsolutePath();
+                new Search(filePath);
             }
         }
         if (e.getSource() == fileSaveMenu) {
