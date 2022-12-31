@@ -41,7 +41,7 @@ public class Search extends Implementation {
     }
 
     public void RUN() {
-        new GUI_APP(DB).RUN_GUI(DB);
+        new MainGUIWindow(DB).RUN_GUI(DB);
         // -------------------------------------------------------------
         // @NOTE: BELOW CODE ONLY RUNS IN TERMINAL. USE FULL FOR DUBBING.
         // -------------------------------------------------------------

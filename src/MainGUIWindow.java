@@ -16,7 +16,7 @@ import java.util.Set;
 import java.io.*;
 import java.io.IOException;
 
-public class GUI_APP extends JFrame implements ActionListener, KeyListener {
+public class MainGUIWindow extends JFrame implements ActionListener, KeyListener {
 
     // Declare and initialize a JTextField for user input
     private JTextField inputField = new JTextField(20);
@@ -31,15 +31,14 @@ public class GUI_APP extends JFrame implements ActionListener, KeyListener {
     private JMenuItem changeInputColor, changeOutputColor, changeInputBGColor, changeOutputBGColor;
     private Set<String> result;
 
-    public GUI_APP(Implementation database) {
-
+    public MainGUIWindow(Implementation database) {
         this.database = database;
+        ImageIcon imageIcon = new ImageIcon("src/images/icon.png");
+        setIconImage(imageIcon.getImage());
         // Set the layout of the window to be a BorderLayout
         setLayout(new BorderLayout());
         // Create a panel to hold the input field and search button
         JPanel inputPanel = new JPanel();
-        ImageIcon imageIcon = new ImageIcon("src/images/icon.png");
-        setIconImage(imageIcon.getImage());
 
         inputField.setFont(new Font("Consolas", Font.PLAIN, 15));
         inputField.setCaretColor(Color.black);
@@ -151,7 +150,7 @@ public class GUI_APP extends JFrame implements ActionListener, KeyListener {
             System.exit(0);
         }
         if (e.getSource() == instructionFile) {
-            new InstructionsGUI(outputTextArea.getBackground(), outputTextArea.getForeground());
+            new InstructionsWindow(outputTextArea.getBackground(), outputTextArea.getForeground());
         }
         if (e.getSource() == changeInputColor) {
             Color color = JColorChooser.showDialog(null, "Pick a color", Color.white);
@@ -191,7 +190,7 @@ public class GUI_APP extends JFrame implements ActionListener, KeyListener {
 
     public void RUN_GUI(Implementation db) {
         // Create a new GUI_APP object and make it visible
-        GUI_APP gui = new GUI_APP(db);
+        MainGUIWindow gui = new MainGUIWindow(db);
         gui.setSize(550, 550);
         gui.setTitle("Search Engine");
         gui.setLocationRelativeTo(null);

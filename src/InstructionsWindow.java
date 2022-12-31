@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class InstructionsGUI extends JFrame implements ActionListener {
+public class InstructionsWindow extends JFrame implements ActionListener {
 
     // text area to display the instructions
     private JTextArea instructionsArea;
@@ -12,7 +12,7 @@ public class InstructionsGUI extends JFrame implements ActionListener {
     // button to close the instructions and start a new search
     private JButton closeButton;
 
-    public InstructionsGUI(Color BGcolor, Color forGroundColor) {
+    public InstructionsWindow(Color BGcolor, Color forGroundColor) {
         // set up the GUI
         setTitle("Instructions");
         setSize(550, 550);
