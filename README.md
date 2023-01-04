@@ -20,6 +20,10 @@ This Search Engine is an extension of the C++ "Min-Search-Engine" program's conc
 ```
 git clone https://github.com/UBakaliya/Search_Engine.git
 ```
+OR
+```
+[Donwload Zip](https://github.com/UBakaliya/Search_Engine/archive/refs/heads/main.zip)
+```
 ---
 ## Usage
 To use the Search Engine, simply enter your search query in the input field and click the "Search" button. The application will retrieve and display the search results, including the body text of the URLs, in the results panel. You can customize the color scheme of the interface by clicking on the "Settings" button and selecting your preferred color scheme.
