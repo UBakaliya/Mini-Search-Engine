@@ -2,7 +2,7 @@
  * @file Interface.java 
  * @since 12-23-2022
  * {@summary} All of the interface functions that will be used will be in this file.
- * @copyright © 2022 UB
+ * @copyright © 2022 Uvaish Bakaliya
  */
 
 package src;
