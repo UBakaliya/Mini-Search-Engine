@@ -1,3 +1,11 @@
+/**
+ * @file InstructionsWindow.java
+ * @author Uvaish Bakaliya
+ * @since 21-01-2023
+ * @apiNote The creator has granted full access to the user who is utilizing it.
+ * @copyright © 2022 UB
+ */
+
 package src;
 
 import javax.swing.*;
