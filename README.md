@@ -18,11 +18,11 @@ This Search Engine is an extension of the C++ "Min-Search-Engine" program's conc
 # Installation
 - To run the Search Engine, you will need to have Java 8 or higher installed on your machine. Once you have Java installed, you can download the Search - - Engine program files from this repository using the following command:
 ```
-git clone https://github.com/UBakaliya/Search_Engine.git
+git clone https://github.com/UBakaliya/Search-Engine.git
 ```
 #### *** OR ***
 
-[Download Zip](https://github.com/UBakaliya/Search_Engine/archive/refs/heads/main.zip)
+* [Download Zip](https://github.com/UBakaliya/Search-Engine/archive/refs/heads/main.zip)
 
 ---
 ## Usage
@@ -40,7 +40,7 @@ This project is licensed under the Uvaish Bakaliya license. See the LICENSE file
 ## Program is action:
 After downloading the application, identify the place where it was downloaded to get started.
 
-Double click on `Search_Engine.jar` start the program. Enjoy 😉.
+Double click on `Search-Engine.jar` start the program. Enjoy 😉.
 
 - Here is a screenshot of the application in action:
 
