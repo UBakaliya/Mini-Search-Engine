@@ -1,6 +1,6 @@
 <!-- @format -->
 
-# Search Engine
+# Mini Search Engine
 This Search Engine is an extension of the C++ "Min-Search-Engine" program's concept, written in Java and featuring a GUI interface. In addition to displaying the URLs of search results, this application also displays the body text of the URLs and allows users to change the color scheme of the interface.
 
 ## Features
